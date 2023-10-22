@@ -1,6 +1,15 @@
 # Esse ep foi desenvolvido para disciplina de MAC5725 - Linguística Computacional, estou usando o córpus b2w por meio do link: https://raw.githubusercontent.com/americanas-tech/b2w-reviews01/main/B2W-Reviews01.csv 
 É necessário realizar às seguintes importações: 
 
+    
+# Pré requisito
+Meu carregamento só se deu usando o Google Colab Pro, usando a V100. Por isso, deixo como pré requisito.
+
+# DATASET
+
+Carregar o dataset da seguinte maneira:  https://raw.githubusercontent.com/americanas-tech/b2w-reviews01/main/B2W-Reviews01.csv --output 'B2W-Reviews01.csv' 
+
+# Importações 
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -18,13 +27,20 @@ from tensorflow.keras.utils import plot_model
 from keras.preprocessing.text import Tokenizer
 from tensorflow.keras.models import load_model
 from sklearn.metrics import confusion_matrix, classification_report
-     
-# Pré requisito
-Meu carregamento só se deu usando o Google Colab Pro, usando a V100. Por isso, deixo como pré requisito.
 
-# DATASET
+# Executar tudo
+Como apresentado anteriormente, coloquei como pré requisito o Google Colab Pro, pois só dessa maneira, pude colocar um: Executar tudo. 
 
-Carregar o dataset da seguinte maneira:  https://raw.githubusercontent.com/americanas-tech/b2w-reviews01/main/B2W-Reviews01.csv --output 'B2W-Reviews01.csv' 
+# Informações Adicionais
+Há um jupyternotebook anexo nesse git, para que não se gaste recursos para o rodar, a análise desse notebook foi inserido em: Artigo NLP V10
+Tais como gráficos, imagens e conclusões após rodar.
+
+Não obtive um bom desempenho com acurácia, por conta de mau gerenciamento de tempo, mas há formas de se fazer isso, mesmo que para melhorias mínimas. 
+
+Do córpus já mencionado, colunas relevantes foram extraídas da seguinte forma: 
+B2WReviews01 = df[['review_text', 'overall_rating']]
+
+Informações não relevantes, mas que fazem parte do relatório.
 
 Os dados foram separados em 3 partes idealmente:
 • Treinamento: 65%
@@ -41,9 +57,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import seaborn as sns
-
-Do córpus já mencionado, colunas relevantes foram extraídas da seguinte forma: 
-B2WReviews01 = df[['review_text', 'overall_rating']]
 
 O primeiro hiperparâmetro aqui trabalhado, foi:
 Tamanho máximo de sequência: 795
