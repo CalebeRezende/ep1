@@ -1,4 +1,31 @@
 # Esse ep foi desenvolvido para disciplina de MAC5725 - Linguística Computacional, estou usando o córpus b2w por meio do link: https://raw.githubusercontent.com/americanas-tech/b2w-reviews01/main/B2W-Reviews01.csv 
+É necessário realizar às seguintes importações: 
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+import seaborn as sns
+from keras.preprocessing.sequence import pad_sequences
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers import Embedding, LSTM, Dense, Dropout, Bidirectional
+from keras.preprocessing.text import Tokenizer
+import pandas as pd
+import tensorflow as tf
+from keras.callbacks import ModelCheckpoint, EarlyStopping
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.utils import plot_model
+from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.models import load_model
+from sklearn.metrics import confusion_matrix, classification_report
+     
+# Pré requisito
+Meu carregamento só se deu usando o Google Colab Pro, usando a V100. Por isso, deixo como pré requisito.
+
+# DATASET
+
+Carregar o dataset da seguinte maneira:  https://raw.githubusercontent.com/americanas-tech/b2w-reviews01/main/B2W-Reviews01.csv --output 'B2W-Reviews01.csv' 
+
 Os dados foram separados em 3 partes idealmente:
 • Treinamento: 65%
 • Validação: 10%
