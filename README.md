@@ -2,9 +2,7 @@
 
 Calebe Macena Rezende, Nª USP: 9366151
 
-É necessário realizar às seguintes importações: 
-
-    
+   
 # Pré requisito
 Meu carregamento só se deu usando o Google Colab Pro, usando a V100. Por isso, deixo como pré requisito.
 
