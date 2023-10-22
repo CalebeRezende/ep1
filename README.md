@@ -1,4 +1,7 @@
-# Esse ep foi desenvolvido para disciplina de MAC5725 - Linguística Computacional, estou usando o córpus b2w por meio do link: https://raw.githubusercontent.com/americanas-tech/b2w-reviews01/main/B2W-Reviews01.csv 
+# Esse ep foi desenvolvido para disciplina de MAC5725 - Linguística Computacional
+
+Calebe Macena Rezende, Nª USP: 9366151
+
 É necessário realizar às seguintes importações: 
 
     
